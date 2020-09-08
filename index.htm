@@ -31,27 +31,16 @@
   	userAvatarInitials: 'You',
 	messageActivityWordBreak: 'break-word',
 	richCardWrapTitle: true};
-const styleSet = createStyleSet ( {
-  ...styleOptions,
-} );
-
-styleSet.activities = {
-  ...styleSet.activities,
-  backgroundImage: url('https://raw.githubusercontent.com/TameezAustell/AustellChatBot/master/Austell.png');
-}      
-	    
-window.WebChat.renderWebChat(
+      window.WebChat.renderWebChat(
         {
           directLine: window.WebChat.createDirectLine({
             token: 'dcbp5xZoR9g.ShnWFJ7oXjT9kLgqD9NvzhzKUEcUpP1Uu2DzYDBTxIw'
           }),
           locale: 'en-US',
-		  styleSet
+		  styleOptions
         },
         document.getElementById('webchat')
       );
     </script>
   </body>
 </html>
-
-
