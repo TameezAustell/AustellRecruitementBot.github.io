@@ -30,15 +30,23 @@
 	botAvatarInitials: '',
   	userAvatarInitials: 'You',
 	messageActivityWordBreak: 'break-word',
-	backgroundImage: "url('https://raw.githubusercontent.com/TameezAustell/AustellChatBot/master/Austell.png')",
 	richCardWrapTitle: true};
-      window.WebChat.renderWebChat(
+const styleSet = createStyleSet ( {
+  ...styleOptions,
+} );
+
+styleSet.activities = {
+  ...styleSet.activities,
+  backgroundImage: "url('https://raw.githubusercontent.com/TameezAustell/AustellChatBot/master/Austell.png')";
+}      
+	    
+window.WebChat.renderWebChat(
         {
           directLine: window.WebChat.createDirectLine({
             token: 'dcbp5xZoR9g.ShnWFJ7oXjT9kLgqD9NvzhzKUEcUpP1Uu2DzYDBTxIw'
           }),
           locale: 'en-US',
-		  styleOptions
+		  styleSet
         },
         document.getElementById('webchat')
       );
